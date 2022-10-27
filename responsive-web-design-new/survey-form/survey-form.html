@@ -1,0 +1,90 @@
+<!-- 
+    PROJECT:
+    https://www.freecodecamp.org/learn/2022/responsive-web-design/build-a-survey-form-project/build-a-survey-form
+
+    EXAMPLE:
+    https://survey-form.freecodecamp.rocks
+ -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <link href="survey-form.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1 id="title">freeCodeCamp Survey Form</h1>
+            <p id="description">Thank you for taking the time to help us improve the platform</p>
+        </header>
+
+        <form id="survey-form">
+            <label for="name" id="name-label">Enter your full name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+            <label for="email" id="email-label">Enter your e-mail:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your Email" required>
+            <label for="age" id="number-label">Enter your age:</label>
+            <input type="number" id="number" name="age" placeholder="Age (optional)" min="10" max="99">
+
+            <label>Select your preferred gender:
+                <select id="dropdown" name="gender">
+                    <option selected disabled value="">Gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+            </label>
+
+            <div class="form-group">
+                <label>Which courses have you tried on freecodecamp?</label>
+                <label><input type="checkbox" name="courses" value="responsive-web-design-new">Responsive Web Design
+                    (New)</label>
+                <label><input type="checkbox" name="courses" value="responsive-web-design-old">Responsive Web Design
+                    (Legacy)</label>
+                <label><input type="checkbox" name="courses" value="javascript-algorithms-and-data-structures">JavaScript Algorithms and Data Structures</label>
+                <label><input type="checkbox" name="courses" value="front-end">Front End Development Libraries</label>
+                <label><input type="checkbox" name="courses" value="data-visualization">Data Visualization</label>
+                <label><input type="checkbox" name="courses" value="back-end">Back End Development and APIs</label>
+                <label><input type="checkbox" name="courses" value="quality-assurance">Quality Assurance </label>
+                <label><input type="checkbox" name="courses" value="python-scientific-computing">Scientific Computing
+                    with
+                    Python</label>
+                <label><input type="checkbox" name="courses" value="python-data-analysis">Data Analysis with
+                    Python</label>
+                <label><input type="checkbox" name="courses" value="information-security">Information Security</label>
+                <label><input type="checkbox" name="courses" value="python-machine-learning">Machine Learning with
+                    Python</label>
+                <label><input type="checkbox" name="courses" value="coding-interview-prep">Coding Interview Prep
+                    (Thousands
+                    of hours of challenges)</label>
+                <label><input type="checkbox" name="courses" value="relational-database">Relational Database
+                    (Beta)</label>
+            </div>
+
+            <div class="form-group">
+                <label>How would you rate your experience on freecodecamp?</label>
+                <label><input type="radio" name="rating" value="poor">Poor</label>
+                <label><input type="radio" name="rating" value="fair">Fair</label>
+                <label><input type="radio" name="rating" value="ok">OK</label>
+                <label><input type="radio" name="rating" value="good">Good</label>
+                <label><input type="radio" name="rating" value="excellent">Excellent</label>
+            </div>
+
+            <div class="form-group">
+                <label>Any comments or suggestions?</label>
+                <textarea id="comment" rows="4" placeholder="We're glad to hear any other comments"></textarea>
+            </div>
+
+            <input type="submit" id="submit" value="Submit">
+
+
+        </form>
+    </div>
+</body>
+
+</html>

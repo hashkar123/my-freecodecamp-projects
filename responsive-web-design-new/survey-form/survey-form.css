@@ -1,0 +1,107 @@
+body {
+    background-color: rgb(58, 58, 158);
+    color: whitesmoke;
+    font-family: sans-serif;
+    font-size: 1.125rem;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    width: 80vw;
+    margin: 0 auto;
+    min-width: 300px;
+    max-width: 600px;
+}
+
+header {
+    margin: auto;
+}
+
+form {
+    background-color: #1b1b32;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    width: 100%;
+}
+
+
+h1,
+p {
+    margin: unset auto;
+    text-align: center;
+}
+
+
+
+label,
+input,
+textarea {
+    display: block;
+    width: 100%;
+}
+
+p {
+    font-size: 1rem;
+}
+
+label {
+    display: flex;
+    margin-top: 1rem;
+    align-items: center;
+}
+
+label:first-child {
+    margin-top: 0;
+}
+
+
+input,
+select,
+textarea {
+    border-radius: 0.25rem;
+    font-size: 1em;
+}
+
+input {
+    height: 2.25em;
+    margin-top: 0.25em;
+    padding: 0 0.75em;
+}
+
+select {
+    height: 1.5em;
+    margin: auto 1em;
+    padding: 0 0.25em;
+}
+
+textarea {
+    margin-top: 0.25em;
+    padding: 0.5em;
+    font-size: 0.9em;
+}
+
+.form-group {
+    margin-top: 1rem;
+}
+
+.form-group label {
+    margin-top: 0.25rem;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    display: inline-block;
+    margin-right: 0.625rem;
+    min-height: 1.25rem;
+    min-width: 1.25rem;
+    height: unset;
+    width: unset;
+}
+
+input[type="submit"] {
+    width: 60%;
+    margin: 1em auto;
+}
