@@ -1,0 +1,155 @@
+html {
+    /* Setting a base font size of 10px give us easier rem calculations
+         Info: 1rem === 10px, 1.5rem === 15px, 2rem === 20px and so forth
+       */
+    font-size: 10px;
+}
+
+
+body {
+    font-size: 1.6rem;
+    font-family: Roboto, Helvetica, Arial, sans-serif;
+    color: #2A2A22;
+    margin: 0;
+    padding: 5px 0 5px 0;
+    line-height: 1.5;
+    /* text-align: center; */
+}
+
+.container-main {
+    width: 93%;
+    max-width: 1200px;
+    margin: 5px auto;
+    border-radius: 10px;
+}
+
+main {
+    /* padding: 5px 0 5px 0; */
+    padding: 5px 5px 20px 5px;
+    text-align: center;
+}
+
+
+
+h1,
+h2,
+h3 {
+    /* margin: 15px 0 0 0; */
+}
+
+#img-div {
+    margin: 0 auto 1.5em;
+    padding: 5px;
+    border: 3px groove;
+    border-radius: 3px;
+    width: fit-content;
+}
+
+@media (min-width: 900px) {
+    #img-div {
+        margin-bottom: 2em;
+    }
+}
+
+#image {
+    /* width: 80%; */
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: auto;
+}
+
+#img-caption {
+    margin-top: 10px;
+}
+
+#tribute-info {
+    margin: 0 auto;
+    max-width: 700px;
+}
+
+@media (min-width: 900px) {
+    #tribute-info {
+        font-size: 1.8rem;
+    }
+}
+
+ul {
+    text-align: start;
+    padding-inline-start: 2em;
+    list-style-type: "🌾 ";
+}
+
+ul li {
+    padding-bottom: 0.5em;
+}
+
+
+.bg-img-body {
+    /* The image used */
+    background-image: url("wheat-background.jpg");
+    /* Full height */
+    height: 100%;
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* Background fallback color */
+    background-color: #FFDC5C;
+
+    /* content: "";
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: -99;
+    display: block; */
+
+    /* Add the blur effect */
+    /* -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px);
+    filter: blur(5px); */
+
+}
+
+.bg-img-main {
+    /* The image used */
+    background-image: url("wheat-bg2-filtered.jpg");
+
+    /* Make the image go from its natural color to brighter (to make the text more readable) */
+    /* background: linear-gradient(rgba(255, 255, 255, 0.5), rgb(255, 255, 255, 0.5)), url("wheat-bg2.jpg"); */
+    /* Full height */
+    /* height: 100%; */
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    /* background-size: cover; */
+    background-size: auto 150%;
+
+    /* Background fallback color */
+    background-color: #ddb140;
+
+    /* content: "";
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    display: block; */
+}
+
+/* .bg-img-main::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.1);
+    pointer-events: none;
+} */
+
+.blur-behind {
+    -webkit-backdrop-filter: blur(7px);
+    backdrop-filter: blur(7px);
+}
