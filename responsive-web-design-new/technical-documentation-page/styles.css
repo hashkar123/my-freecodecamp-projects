@@ -1,0 +1,63 @@
+html {
+    /* Setting a base font size of 10px give us easier rem calculations
+         Info: 1rem === 10px, 1.5rem === 15px, 2rem === 20px and so forth
+       */
+    font-size: 10px;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: Roboto, Helvetica, Arial, sans-serif;
+    color: #2A2A22;
+    margin: 0;
+    /* padding: 5px 0 5px 0;
+    line-height: 1.5; */
+    /* text-align: center; */
+}
+
+* {
+    box-sizing: border-box;
+}
+
+#navbar {
+    border: 2px solid gray;
+}
+
+#navbar header {
+    text-align: center;
+}
+
+#navbar ul {
+    display: flex;
+    flex-direction: column;
+    max-height: 150px;
+    padding: 0;
+    list-style: none;
+    overflow-x: auto;
+    overflow-y: auto;
+}
+
+#navbar ul li {
+    padding: 0.5em 1em;
+}
+
+@media (min-width: 800px) {
+    #navbar {
+        /* TODO: Navbar for desktops/laptops */
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 20em;
+    }
+
+    #navbar ul {
+        height: 100%;
+        max-height: none;
+    }
+
+    #main-doc {
+        margin-left: 20em;
+
+    }
+}
