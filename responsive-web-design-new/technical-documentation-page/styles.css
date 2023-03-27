@@ -19,8 +19,13 @@ body {
     box-sizing: border-box;
 }
 
+header {
+    font-size: 1.5em;
+    padding-top: 0.5em;
+}
 #navbar {
     border: 2px solid gray;
+    margin: 5px;
 }
 
 #navbar header {
@@ -30,16 +35,61 @@ body {
 #navbar ul {
     display: flex;
     flex-direction: column;
+    font-size: 1.25em;
+        color: #5A5A5A;
     max-height: 150px;
-    padding: 0;
+    /* padding: 0; */
+        padding-inline-start: 0;
     list-style: none;
     overflow-x: auto;
     overflow-y: auto;
 }
 
 #navbar ul li {
-    padding: 0.5em 1em;
+    /* border: 1px solid #2A2A22; */
+        border-top: 1px solid #2A2A22;
+        /* border-bottom: 1px solid #2A2A22; */
+    }
+    
+    #navbar ul li:hover {
+        background-color: #2A2A22;
+        color: #e0e0e0;
+    }
+    
+    #navbar a {
+        display: block;
+        /* padding: 5px 10px; */
+        padding-inline-start: 20px;
+        padding-block: 10px;
+        color: inherit;
+        text-decoration: none;
+    }
+    
+    #main-doc {
+        padding: 0.5em 2em;
+    }
+    
+    #main-doc header {
+        /* font-size: 1.5em; */
+        padding-top: 0.5em;
+    }
+    
+    #main-doc article {
+        padding-inline: 15px;
+    }
+    
+    code {
+        display: block;
+        padding: 15px;
+        margin: 10px;
+        background-color: #e0e0e0;
+        border-radius: 5px;
+        line-height: 2;
+        word-break: normal;
+        word-wrap: normal;
+        white-space: pre-line;
 }
+
 
 @media (min-width: 800px) {
     #navbar {
@@ -49,6 +99,9 @@ body {
         left: 0;
         height: 100%;
         width: 20em;
+        margin: 0;
+            border: none;
+            border-inline-end: 5px solid gray;
     }
 
     #navbar ul {
