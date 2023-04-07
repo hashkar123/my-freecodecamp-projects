@@ -1,0 +1,13 @@
+body {
+    height: 2000px;
+}
+
+#header {
+    display: flex;
+    position: sticky;
+    top: 0;
+}
+
+#nav-bar {}
+
+@media only screen and (min-width: 600px) {}
