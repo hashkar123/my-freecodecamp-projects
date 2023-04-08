@@ -5,21 +5,111 @@
     --btn-color-hover: #ffa500;
     --font-fam-1: 'Lato';
     --font-fam-1-fallback: sans-serif;
-}
-body {
-    /* height: 2000px; */
+    --font-color: #2A2A22;
 }
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    /* Setting a base font size of 10px give us easier rem calculations
+         Info: 1rem === 10px, 1.5rem === 15px, 2rem === 20px and so forth
+       */
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: var(--font-fam-1), var(--font-fam-1-fallback);
+    background-color: var(--background-color);
+    color: var(--font-color);
+}
+
+
 #header {
-    display: flex;
     position: sticky;
     top: 0;
+    width: 100%;
+    background-color: var(--background-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 20px;
+
+
 }
+
+#header-img {
+    width: 100%;
+    padding-right: 15px;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    /* margin: 15px 0 5px; */
+
+}
+
+#nav-bar ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+
+}
+
+#nav-bar ul li {
+    margin: 3px 0;
+    width: 100%;
+}
+
+#nav-bar a {
+    text-decoration: none;
+    color: var(--font-color);
+    display: block;
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+    margin: 0.5em 5px;
+}
+
+input {
+    display: block;
+}
+
+input[type="email"] {
+    padding: 5px;
+    margin: 5px auto;
+    width: 80%;
+    max-width: 20em;
+}
+
+input[type="submit"] {
+    margin: 10px auto;
+    border-radius: 0%;
+    border: none;
+    padding: 5px 15px;
+    font-weight: 700;
+    font-size: 1em;
+    /* font-family: inherit; */
+    background-color: var(--btn-color-init);
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: var(--btn-color-hover);
+    transition: background-color 1s;
+}
+
 
 .feat-icon {
     color: var(--icon-color);
     font-size: 5em;
 }
-#nav-bar {}
+
 
 @media only screen and (min-width: 600px) {}
