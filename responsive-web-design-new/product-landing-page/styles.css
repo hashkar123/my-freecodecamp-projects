@@ -1,5 +1,13 @@
+:root {
+    --background-color: #EEEEEE;
+    --icon-color: #FF8C00;
+    --btn-color-init: #f1c40f;
+    --btn-color-hover: #ffa500;
+    --font-fam-1: 'Lato';
+    --font-fam-1-fallback: sans-serif;
+}
 body {
-    height: 2000px;
+    /* height: 2000px; */
 }
 
 #header {
@@ -8,6 +16,10 @@ body {
     top: 0;
 }
 
+.feat-icon {
+    color: var(--icon-color);
+    font-size: 5em;
+}
 #nav-bar {}
 
 @media only screen and (min-width: 600px) {}
