@@ -1,11 +1,16 @@
 :root {
-    --background-color: #EEEEEE;
+    --background-color1: #EEEEEE;
+    --background-color2: #ddd;
     --icon-color: #FF8C00;
     --btn-color-init: #f1c40f;
     --btn-color-hover: #ffa500;
     --font-fam-1: 'Lato';
     --font-fam-1-fallback: sans-serif;
-    --font-color: #2A2A22;
+    --font-color: #000;
+}
+
+* {
+    /* outline:red 1px solid; */
 }
 
 * {
@@ -24,8 +29,9 @@ html {
 body {
     font-size: 1.6rem;
     font-family: var(--font-fam-1), var(--font-fam-1-fallback);
-    background-color: var(--background-color);
+    background-color: var(--background-color1);
     color: var(--font-color);
+    width: 100%;
 }
 
 
@@ -33,13 +39,11 @@ body {
     position: sticky;
     top: 0;
     width: 100%;
-    background-color: var(--background-color);
+    background-color: var(--background-color1);
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 0 20px;
-
-
 }
 
 #header-img {
@@ -57,7 +61,6 @@ body {
     flex-direction: column;
     align-items: center;
     justify-items: center;
-
 }
 
 #nav-bar ul li {
@@ -72,9 +75,13 @@ body {
     text-align: center;
 }
 
+#hero {
+    margin: 0.5em auto 30px;
+}
+
 h2 {
     text-align: center;
-    margin: 0.5em 5px;
+    /* margin: 0.5em 5px; */
 }
 
 input {
@@ -106,10 +113,122 @@ input[type="submit"]:hover {
 }
 
 
+.feat-cont {
+    margin-top: 2em;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 98%;
+    text-align: center;
+}
+
 .feat-icon {
+    display: none;
     color: var(--icon-color);
     font-size: 5em;
 }
 
+#how-it-works {
+    margin-top: 70px;
+}
 
 @media only screen and (min-width: 600px) {}
+
+#video {
+    max-width: 100%;
+    margin: 10px auto;
+}
+
+.offers-cont {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+    text-align: center;
+    margin: 50px 0;
+}
+
+.offer-name {
+    background-color: var(--background-color2);
+    padding: 1.5rem 0;
+    text-align: center;
+
+}
+
+.offer-name h3 {
+    font-size: 1.6rem;
+    text-transform: uppercase;
+}
+
+.offer {
+    width: 30rem;
+    max-width: 99%;
+    border: solid 1px black;
+    border-radius: 2%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+
+.offer h2 {
+    margin: 1.5rem auto;
+}
+
+.offer ul li {
+    margin: 1rem auto;
+
+}
+
+.offer ul {
+    list-style: none;
+    margin: 1.5rem auto;
+}
+
+button {
+    margin: 15px auto;
+    border-radius: 0%;
+    border: none;
+    padding: 10px 20px;
+    /* margin: 5px auto; */
+    /* font-weight: 700; */
+    font-size: 1em;
+    /* font-family: inherit; */
+    background-color: var(--btn-color-init);
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--btn-color-hover);
+    transition: background-color 1s;
+}
+
+footer {
+    background-color: var(--background-color2);
+    padding: 20px 20px;
+}
+
+footer ul {
+    display: flex;
+    flex-direction: row;
+    flex-flow: wrap;
+    justify-content: flex-end;
+
+    list-style: none;
+}
+
+footer ul li {
+    padding: 5px 10px;
+}
+
+footer a {
+    color: inherit;
+}
+
+footer span {
+    color: #444;
+    display: block;
+    text-align: end;
+    font-size: 1.4rem;
+}
