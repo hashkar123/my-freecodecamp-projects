@@ -9,14 +9,14 @@
     --font-color: #000;
 }
 
-* {
-    /* outline:red 1px solid; */
-}
+
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
+    /* outline:red 1px solid; */
 }
 
 html {
@@ -75,6 +75,7 @@ body {
     text-align: center;
 }
 
+
 #hero {
     margin: 0.5em auto 30px;
 }
@@ -128,14 +129,21 @@ input[type="submit"]:hover {
 }
 
 #how-it-works {
-    margin-top: 70px;
+    /* iframe element has {display:inline} by default */
+    margin: 80px auto 10px;
+    width: 100%;
+    text-align: center;
 }
 
 @media only screen and (min-width: 600px) {}
 
 #video {
-    max-width: 100%;
-    margin: 10px auto;
+    /* iframe element has {display:inline} by default */
+    aspect-ratio: 16 / 9;
+    height: auto;
+    width: 96%;
+    max-width: 720px;
+    /* margin: 0 auto; */
 }
 
 .offers-cont {
@@ -224,6 +232,7 @@ footer ul li {
 
 footer a {
     color: inherit;
+    text-decoration: none;
 }
 
 footer span {
