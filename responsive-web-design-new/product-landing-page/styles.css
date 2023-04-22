@@ -121,17 +121,20 @@ body {
     }
     #nav-bar ul {
         flex-direction: row;
+        gap: 6px;
+        padding-right: 5%;
     }
     #nav-bar ul li {
-        margin: 0 6px;
-        overflow-wrap: normal;
+        /* margin: 0 6px; */
+        /* overflow-wrap: normal; */
     }
 }
 
 
 #hero {
-    margin: 2.5rem auto 30px;
+    margin: 2.5rem auto 10rem;
 }
+
 
 h2 {
     text-align: center;
