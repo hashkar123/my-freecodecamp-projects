@@ -6,9 +6,9 @@ from pathlib import Path
 
 The projects should written in this form: 
 ## course-name
-- ### [first-project](first-project's-url)
-- ### [second-project](second-project's-url)
-and so on... 
+ ### &nbsp;&nbsp;&nbsp;&nbsp; [first-project](first-project's-url)
+ ### &nbsp;&nbsp;&nbsp;&nbsp; [second-project](second-project's-url)
+and so on...  
 '''
 
 
@@ -16,12 +16,16 @@ def main():
     README_PATH = Path('./README.md')
     TEMPLATE_PATH = Path('./README_TEMPLATE.md')
     GH_PAGES_URL_START = 'https://hashkar123.github.io/my-freecodecamp-projects/'
+    GH_PAGES_URL_RESPONSIVE_WEB_DESIGN = 'responsive-web-design-new/'
 
-    projects_md = get_projects_in_md(GH_PAGES_URL_START)
+    COURSE_DIR_NAMES = ['responsive-web-design-new']
+
+    projects_md = get_projects_in_md(GH_PAGES_URL_START, COURSE_DIR_NAMES)
+    print(f'{projects_md=}')
     write2readme(README_PATH, TEMPLATE_PATH, projects_md)
 
 
-def get_projects_in_md(url_start: str):
+def get_projects_in_md(url_start: str, course_dir_lst: [str]):
     '''Returns projects in Markdown format'''
     # projects_dict looks like: {
     # '<course1>': [
@@ -49,16 +53,18 @@ def get_projects_in_md(url_start: str):
         if ignore_dir_flag:
             continue
         # Check if current dir has sub-dirs
-        if not dirnames:  # if empty
+        if not dirnames:  # if it doesn't have more subdirectories
             # Example for dirpath_split: ['.', 'responsive-web-design-new', 'product-landing-page']
-            course = dirname2title(dirpath_split[1])
-            project_name = dirname2title(dirpath_split[2])
-            project_url = url_start + '/'.join(dirpath_split[1:])
-            if course not in projects_dict:
-                projects_dict[course] = []
-            projects_dict[course].append(
-                {'pj_name': project_name,
-                 'pj_url': project_url})
+            # print(dirpath_split[1])
+            if dirpath_split[1] in course_dir_lst: # If this is one of the courses I want
+                course = dirname2title(dirpath_split[1])
+                project_name = dirname2title(dirpath_split[2])
+                project_url = url_start + '/'.join(dirpath_split[1:])
+                if course not in projects_dict:
+                    projects_dict[course] = []
+                projects_dict[course].append(
+                    {'pj_name': project_name,
+                    'pj_url': project_url})
     # print(projects_dict)
     # return
     # Transform projects_dict into a Markdown-formatted string (in the format specified at the top of this file)
@@ -68,7 +74,7 @@ def get_projects_in_md(url_start: str):
         for pj_dict in pjs_lst:
             pj_name = pj_dict['pj_name']
             pj_url = pj_dict['pj_url']
-            projects_md += f'- ### [{pj_name}]({pj_url})\n'
+            projects_md += f' ### &nbsp;&nbsp;&nbsp;&nbsp; [{pj_name}]({pj_url})\n'
         projects_md += '\n'
     # print(projects_md)
     return (projects_md)
@@ -85,8 +91,8 @@ def write2readme(readme_path: str, template_path, projects_md: str = 'No project
 
     with open(template_path, 'r', encoding='UTF-8') as f:
         template = f.read()
-    block_start = '{%projects-start%}'
-    block_end = '{%projects-end%}'
+    block_start = '//responsive-web-design-projects-start//'
+    block_end = '//responsive-web-design-projects-end//'
     block_start_idx = template.find(block_start)  # index
     block_end_idx = template.find(block_end)  # index
     if block_start_idx == -1 or block_end_idx == -1:
